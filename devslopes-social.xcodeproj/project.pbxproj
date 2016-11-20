@@ -14,6 +14,7 @@
 		802791051DD8AD2C008CE737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802791041DD8AD2C008CE737 /* Assets.xcassets */; };
 		802791081DD8AD2C008CE737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802791061DD8AD2C008CE737 /* LaunchScreen.storyboard */; };
 		802791101DD8AD87008CE737 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8027910F1DD8AD87008CE737 /* GoogleService-Info.plist */; };
+		808AD8E51DE1D96F00FF6A09 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808AD8E41DE1D96F00FF6A09 /* FeedVC.swift */; };
 		8099CDC41DDCA7480097CAD2 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099CDC31DDCA7480097CAD2 /* RoundBtn.swift */; };
 		8099CDC61DDCA9140097CAD2 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099CDC51DDCA9140097CAD2 /* FancyField.swift */; };
 		8099CDC81DDCAAA10097CAD2 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8099CDC71DDCAAA10097CAD2 /* FancyBtn.swift */; };
@@ -31,6 +32,8 @@
 		802791071DD8AD2C008CE737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		802791091DD8AD2C008CE737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8027910F1DD8AD87008CE737 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8063D3FE1DDF5F1400C1515D /* devslopes-social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "devslopes-social.entitlements"; sourceTree = "<group>"; };
+		808AD8E41DE1D96F00FF6A09 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		8099CDC31DDCA7480097CAD2 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		8099CDC51DDCA9140097CAD2 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		8099CDC71DDCAAA10097CAD2 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		802790FC1DD8AD2C008CE737 /* devslopes-social */ = {
 			isa = PBXGroup;
 			children = (
+				8063D3FE1DDF5F1400C1515D /* devslopes-social.entitlements */,
 				80D941BF1DDB57FC001275FC /* Util */,
 				80D28A511DD9B224008DA006 /* Controller */,
 				80D28A501DD9B21E008DA006 /* View */,
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				802790FF1DD8AD2C008CE737 /* SignInVC.swift */,
+				808AD8E41DE1D96F00FF6A09 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -175,6 +180,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = KE32RQXXNT;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -267,6 +277,7 @@
 				802791001DD8AD2C008CE737 /* SignInVC.swift in Sources */,
 				8099CDC41DDCA7480097CAD2 /* RoundBtn.swift in Sources */,
 				802790FE1DD8AD2C008CE737 /* AppDelegate.swift in Sources */,
+				808AD8E51DE1D96F00FF6A09 /* FeedVC.swift in Sources */,
 				80D941BE1DDB56A5001275FC /* FancyView.swift in Sources */,
 				80D941C11DDB5810001275FC /* Constants.swift in Sources */,
 				8099CDC81DDCAAA10097CAD2 /* FancyBtn.swift in Sources */,
@@ -313,6 +324,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -363,6 +375,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -392,7 +405,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C3B165F8CFC20FA82F8F747 /* Pods-devslopes-social.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "devslopes-social/devslopes-social.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = KE32RQXXNT;
 				INFOPLIST_FILE = "devslopes-social/Info.plist";
@@ -408,7 +423,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E802139E811B06B9D1917DEE /* Pods-devslopes-social.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "devslopes-social/devslopes-social.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = KE32RQXXNT;
 				INFOPLIST_FILE = "devslopes-social/Info.plist";

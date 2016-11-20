@@ -72,6 +72,9 @@
                                     <constraint firstAttribute="height" constant="150" id="nHE-AM-LLG"/>
                                 </constraints>
                                 <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kLs-Ok-ike"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ISf-9b-lEp">
                                 <rect key="frame" x="52" y="414" width="283" height="127"/>
@@ -86,7 +89,7 @@
                                         <rect key="frame" x="0.0" y="45" width="283" height="30"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dli-5j-TFf" customClass="FancyBtn" customModule="devslopes_social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="283" height="37"/>
@@ -95,6 +98,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ji-iL-XgZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -118,10 +124,51 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ISf-9b-lEp" secondAttribute="trailing" constant="24" id="y6D-VH-tTp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="b3s-3Y-hZM" id="VDH-MB-ul5"/>
+                        <outlet property="pwdField" destination="Cmx-DX-hIE" id="pL6-yX-2Yb"/>
+                        <segue destination="YuG-Bl-2cg" kind="show" identifier="goToFeed" id="sh7-86-r78"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="JRg-eN-UhT">
+            <objects>
+                <viewController id="YuG-Bl-2cg" customClass="FeedVC" customModule="devslopes_social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gfD-Tj-K4i"/>
+                        <viewControllerLayoutGuide type="bottom" id="tlN-ff-IFf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lS8-4P-bn3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-OC-Iwx">
+                                <rect key="frame" x="157" y="318" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInTapped:" destination="YuG-Bl-2cg" eventType="touchUpInside" id="U63-BZ-gJN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wgf-OC-Iwx" firstAttribute="centerY" secondItem="lS8-4P-bn3" secondAttribute="centerY" id="ACk-en-QG6"/>
+                            <constraint firstItem="Wgf-OC-Iwx" firstAttribute="centerX" secondItem="lS8-4P-bn3" secondAttribute="centerX" id="rb3-0b-ggY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="GnG-tl-1dD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltT-Co-b96" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="38"/>
         </scene>
     </scenes>
     <resources>

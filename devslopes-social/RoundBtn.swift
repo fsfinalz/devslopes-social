@@ -12,6 +12,7 @@ class RoundBtn: UIButton {
 
     
     override func awakeFromNib() {
+        //facebookbtn 커스텀
         super.awakeFromNib()
         
         layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor;

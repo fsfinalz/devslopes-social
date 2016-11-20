@@ -9,7 +9,7 @@
 import UIKit
 
 class FancyBtn: UIButton {
-
+    //Sign in 버튼 커스텀
     override func awakeFromNib() {
         
         super.awakeFromNib();

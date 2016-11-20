@@ -11,6 +11,7 @@ import UIKit
 class FancyView: UIView {
 
     override func awakeFromNib() {
+        //브랜드로고 뷰 커스텀
         super.awakeFromNib()
         
         layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor;
